@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<button onclick="document.getElementById('myImage').src='https://www.arfarf.tw/wp-content/uploads/10%E4%BB%B6%E4%BA%8B-1024x677.jpg'">Dog</button>
+
+<img id="myImage" src="https://www.arfarf.tw/wp-content/uploads/10%E4%BB%B6%E4%BA%8B-1024x677.jpg" style="width:1000px">
+
+<button onclick="document.getElementById('myImage').src='https://storage.googleapis.com/www-cw-com-tw/article/201810/article-5bd182cf13ebb.jpg'">Cat</button>
+
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!</button>
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Disappear</button>
+
+<p id="demo" style="display:none">Hello JavaScript!</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Show</button>
+
+<button type="button" onclick="document.getElementById('demo').style.color='lightblue'">color</button>
+
+<table border>
+  <script language="JavaScript">
+  // 變數宣告
+  var i, j;
+  // 表格標題
+  document.write("<tr><td></td>");
+  for (i=1;i<=9;i++)
+  document.write("<td><b>" + i + "</b></td>");
+  document.write("<tr>");
+  // 巢狀迴路
+  for (i=1;i<=9;i++){
+  document.write("<tr>");
+  document.write("<td><b>" + i + "</b></td>");
+  j = 1;
+  while (j <= 9){
+  document.write("<td>");
+  document.write(i + "*" + j + "=" + i*j);
+  document.write("</td>");
+  j++;
+  }
+  document.write("<tr>");
+  }
+</script>
+
+</body>
+</html>
