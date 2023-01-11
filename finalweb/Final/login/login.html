@@ -1,0 +1,91 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <head>
+        <link rel="stylesheet" href="login.css">
+        <meta charset="UTF-8">
+    </head>
+  
+  <body>
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">關閉 &times;</button>
+      <a href="login.html" class="w3-bar-item w3-button">首頁</a>
+      <a href="../test.html" class="w3-bar-item w3-button">菜單</a>
+      <a href="../history/history.html" class="w3-bar-item w3-button">訂單</a>
+    </div>
+    <div class="w3-teal">
+      <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+      <div class="w3-container">
+        <div style="float:right;margin-right:20px;color:#B4F8C8;">
+          <B><a href="mailto:欲寄往的E-mail網址">✉ABCrestaurant@gmail.com</a></B><br>
+          <B></B><a href="tel:+886-912345678">✆0912345678</a></B><br>
+          <B></B><a href="連結">地址:xxxxxx</a></B>
+        </div>
+        <h1>ABC餐廳</h1>
+        
+      </div>
+    </div>
+    
+    <div id="app">
+    <div class="system_name">
+      <h2>點菜系統</h2>
+    </div>
+      <div class="login_page">
+        <div id="container1">
+
+          <div class="login">  
+            
+            <h3>登入 Login</h3>
+
+
+            <input type="text" id="username" name="username" placeholder="帳號" required>
+            <div class="tab"></div>
+            <input type="text" id="password" name="password" placeholder="密碼" required>
+            <div class="tab"></div>
+            <input type="button" value="登入" class="submit" onclick="cheak()">
+
+
+            <h5 onclick="show_hide()">註冊帳號</h5>
+            
+          </div><!-- login end-->
+        </div><!-- container1 end-->
+      </div><!-- login_page end-->
+      
+      <div class="signup_page">
+        <div id="container2">
+
+          <div class="signup">  
+            
+            <h3>註冊 Sign Up</h3>
+
+            <form action="用戶管理.php">
+              <input type="text" id="username2" name="username" placeholder="帳號" required>
+              <div class="tab"></div>
+              <input type="text" id="password2" name="password" placeholder="密碼" required>
+              <div class="tab"></div>      
+              <input type="button" value="註冊" class="submit" onclick="newuser()">
+            </form>  
+
+            <h5 onclick="show_hide()">登入帳號</h5>
+            
+          </div><!-- signup end-->
+        </div><!-- container2 end-->
+      </div><!-- signup_page end--> 
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src = "login.js"></script>
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+      
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
+  <script src = "login.js"></script>
+</html>

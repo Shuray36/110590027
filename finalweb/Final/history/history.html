@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定單</title>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+    <link rel="stylesheet" href="history.css">
+    
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="item_header">
+                <div class="item_detail">商品</div>
+                <div class="count">數量</div> 
+                <div class="operate">操作</div>
+            </div>
+            <div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
+                    <div class="item_header item_body">
+                            <div class="item_detail">
+                                <div class="name">{{item.itemName}}</div>
+                            </div>
+                            <div class="count">
+                                {{item.count}}
+                            </div> 
+                            <div class="operate">
+                                <button @click="handledelete(index)">刪除</button>
+                            </div>
+                    </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+</body>
+<script src="history.js"></script>
+</html>

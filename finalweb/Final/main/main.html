@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜單</title>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="item_header">
+                <div class="item_detail">商品</div>
+                <div class="price">單價</div>
+                <div class="count">數量</div> 
+                <div class="amount">總計</div>
+            </div>
+            <div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
+                    <div class="item_header item_body">
+                            <div class="item_detail">
+                                <div class="name" id={{item.itemName}}>{{item.itemName}}</div>
+                            </div>
+                            
+                            <div class="price"><span>$</span>{{item.price}}</div>
+                            <div class="count">
+                                <button @click="handleSub(item)">-</button>
+                                {{item.count}}
+                                <button @click="handlePlus(item)">+</button>
+                            </div> 
+                            <div class="amount">{{item.price * item.count}}</div>
+
+                    </div>
+            </div>
+
+
+        </div>
+    
+    </div>
+    <input type="button" value="點餐" onclick= "up()">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <div class="box">
+        <div class="container-1">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input type="search" id="search" placeholder="Search..." />
+            <input type="button" value="搜尋" onclick="">
+        </div>
+      </div>
+</body>
+<script src="main.js"></script>
+</html>
